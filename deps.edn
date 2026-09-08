@@ -5,7 +5,12 @@
  ;; Detects: unused def/defn, undeclared symbol references, capability
  ;; over-grant (generalizes wit's unused_grants). Zero third-party deps; .cljc.
  ;; See ADR-kotoba-lang-foundational-stdlib.md.
- :deps {io.github.kotoba-lang/lint  {:git/sha "0c1ed0ca1e877af7022a8c31409299dcb7a72559"}
+ :deps {
+        ;; kotoba.lang.edn, not clojure.edn. Pinned as an explicit floor:
+        ;; tools.deps takes the NEWEST sha it is shown, so without a floor here
+        ;; this repo silently rides whatever a sibling happens to name.
+        io.github.kotoba-lang/edn {:git/sha "21cfcaefb2e66f93ea46c86c4ce8f90fef1a3843"}
+       io.github.kotoba-lang/lint  {:git/sha "0c1ed0ca1e877af7022a8c31409299dcb7a72559"}
         io.github.kotoba-lang/lsp   {:git/sha "8d055a0388da283a82adb1be556139d6d0ec755a"}
         io.github.kotoba-lang/coll  {:git/sha "9740cc2dc43a192077d77374b869a37940c801e4"}}
  :aliases

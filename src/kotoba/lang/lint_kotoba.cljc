@@ -6,7 +6,7 @@
   (:require [kotoba.lang.lint :as lint]
             [kotoba.lang.lsp :as lsp]
             [kotoba.lang.coll :as c]
-            [clojure.edn :as edn]))
+            [kotoba.lang.edn :as edn]))
 
 (defn- def-name
   "If form is a (def name ...) or (defn name ...), return the name symbol."
