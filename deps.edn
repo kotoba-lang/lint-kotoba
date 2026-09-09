@@ -6,6 +6,19 @@
  ;; over-grant (generalizes wit's unused_grants). Zero third-party deps; .cljc.
  ;; See ADR-kotoba-lang-foundational-stdlib.md.
  :deps {
+        io.github.kotoba-lang/lint-kotoba-analyze
+        {:git/url "https://github.com/kotoba-lang/lint-kotoba-analyze.git"
+         :git/sha "492dba21fcbd0d4bad0ddb0a758bff5e9f9893f7"}
+        io.github.kotoba-lang/lint-kotoba-over-granted-capabilities
+        {:git/url "https://github.com/kotoba-lang/lint-kotoba-over-granted-capabilities.git"
+         :git/sha "a5576251a7b22f2772eb26ca95e4b5778c942995"}
+        io.github.kotoba-lang/lint-kotoba-undeclared-refs
+        {:git/url "https://github.com/kotoba-lang/lint-kotoba-undeclared-refs.git"
+         :git/sha "f2cf7fca0ef4e3781da91ebce0568a48aef385ee"}
+        io.github.kotoba-lang/lint-kotoba-unused-decls
+        {:git/url "https://github.com/kotoba-lang/lint-kotoba-unused-decls.git"
+         :git/sha "8227b4a62fc70497b255a5b9130a773fae2e85e5"}
+
         ;; kotoba.lang.edn, not clojure.edn. Pinned as an explicit floor:
         ;; tools.deps takes the NEWEST sha it is shown, so without a floor here
         ;; this repo silently rides whatever a sibling happens to name.
